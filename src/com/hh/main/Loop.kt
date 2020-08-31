@@ -11,9 +11,12 @@ class Loop() : Runnable{
 
     override fun run(){
         val f = Field(5, 3)
-        val wb = WateringBot()
+        val wb = WateringBot(f)
 
-        f.field[0][0] =  wb.getFacingPos(CardinalHelper.SOUTH)
+        f.field[4][0] =  wb.setFacingSide(CardinalHelper.SOUTH)
+
+        println(wb.getPos())
+        println(wb.currentFacingSide)
 
         while(true) {
             r.update(f)
