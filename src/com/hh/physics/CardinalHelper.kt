@@ -1,15 +1,15 @@
 package com.hh.physics
 
 enum class CardinalHelper {
-    NORTH(0), SOUTH(1), EAST(2), WEST(3);
+    NORTH("N"), SOUTH("S"), EAST("L"), WEST("O");
 
-    var pos = 0;
+    var pos = "";
 
-    constructor(dir: Int){
+    constructor(dir: String){
         this.pos = dir;
     }
 
-    fun getValue(): Int {
+    fun getValue(): String {
         return pos;
     }
 }
