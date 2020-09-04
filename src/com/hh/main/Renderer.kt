@@ -12,6 +12,8 @@ class Renderer {
 
     fun update(f: Field){
 
+        var rows = f.rows
+
         for((l, r) in f.field.withIndex()){
             var i = 0
                 print(tab)
@@ -93,5 +95,7 @@ class Renderer {
         for(i in 0 until wb.cmd.log.size) {
             print(wb.cmd.log[i] + " ")
         }
+
+        println("Orientação final: " + wb.getFacingSide().getValue())
     }
 }

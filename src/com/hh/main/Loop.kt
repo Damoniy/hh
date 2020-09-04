@@ -12,19 +12,7 @@ class Loop() : Runnable{
         val f = Field(6, 5)
         val wb = WateringBot(f)
 
-        wb.setPos(5, 3, CardinalHelper.NORTH)
-
-        r.update(f)
-
-        wb.travelTo(3, 4)
-
-        r.update(f)
-
-        for(i in 0 until wb.cmd.log.size) {
-            print(wb.cmd.log[i] + " ")
-        }
-
-       /* println("Bem-vindo ao console do WateringBot, soluções de irrigação para sua horta! \n" +
+        println("Bem-vindo ao console do WateringBot, soluções de irrigação para sua horta! \n" +
                 "É preciso que informe uma coordenada inicial no formato (x, y) para o robo se localizar:")
 
         val coords = readLine()
@@ -70,7 +58,5 @@ class Loop() : Runnable{
         }
 
         r.logActivities(f, wb)
-        */
-
     }
 }
